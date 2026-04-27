@@ -26,13 +26,18 @@ function App() {
   // quindi va inserito tutto all'interno di un "contenitore Virtuale"
   // Che serve a far rispettare la regola del singolo valore. Si chiama REACT FRAGMENT
   return (
+    // Un componente si ripete ad ogni invocazione in tutto il suo contenuto
+    //  Spesso però un componente deve contenere delle parti "dinamiche"
+    // cioè delle porizioni di: contenuto, stile, logica etc. che possano variari ad ogni invocazione
+    // per ottenere questo risultati si utilizzano delle indicazioni chiamati Props
     <>
-      <Title />
-      <List />
-      <Title />
-      <List />
-      <Title />
-      <List />
+      <Title name="Gianni" />
+      <List item="Lievito" />
+      <Title name="Alessia" numero={100} />
+      {/* Se il valore della Prop è una stringa si mettono le virgolette "" altrimenti si usano le graffe */}
+      <List item="coca cola" />
+      <Title name="Marco" />
+      <List item="Carta igenica" />
     </>
   )
 }

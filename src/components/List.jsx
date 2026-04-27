@@ -16,6 +16,7 @@ class List extends Component {
         <li>{first}</li>
         <li>{second}</li>
         <li>{third}</li>
+        <li>{this.props.item}</li>
       </ul>
     )
   }

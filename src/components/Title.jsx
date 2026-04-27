@@ -5,11 +5,11 @@
 // a classe -> un po' più complessi ma più potenti
 
 // Il nome della funzione e il nome del file devono essere gli stessi e devono essere in PascalCase
-const sole = "Luna"
-const Title = function () {
+const Title = function (props) {
+  // Tutte le propri passate ad un compomente a funzione arrivano in un OGGETTO che è il parametro di questa funzione
   return (
     <div>
-      <h2>Che bella giornata di {sole}</h2>
+      <h2>Mi chiamo {props.name}</h2>
     </div>
   )
 }
