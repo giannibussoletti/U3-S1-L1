@@ -5,10 +5,11 @@
 // a classe -> un po' più complessi ma più potenti
 
 // Il nome della funzione e il nome del file devono essere gli stessi e devono essere in PascalCase
+const sole = "Luna"
 const Title = function () {
   return (
     <div>
-      <h2>Che bella giornata di sole</h2>
+      <h2>Che bella giornata di {sole}</h2>
     </div>
   )
 }

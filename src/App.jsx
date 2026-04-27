@@ -19,6 +19,7 @@ import "./App.css"
 // come inserisco Title dentro App
 // prima lo importo
 import Title from "./components/Title"
+import List from "./components/List"
 
 function App() {
   // la regola dice che un'espressione JSX (come il valore di un return) può contenere UN SOLO VALORE
@@ -27,6 +28,11 @@ function App() {
   return (
     <>
       <Title />
+      <List />
+      <Title />
+      <List />
+      <Title />
+      <List />
     </>
   )
 }
