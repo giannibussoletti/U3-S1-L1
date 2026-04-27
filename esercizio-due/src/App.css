@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 576px;
+  background-color: grey;
+  color: white;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.single-post {
+  background-color: #252728;
+}
+
+.name-date {
+  display: flex;
+  flex-direction: column;
+}
+.name-date p {
+  margin: 0;
+}
+
+.account-name {
+  font-weight: 700;
+  color: #e2e5e9;
+  font-size: 0.95em;
+}
+
+.posted-date {
+  color: #b0b3b8;
+  font-weight: 700;
+  font-size: 0.8em;
+}
