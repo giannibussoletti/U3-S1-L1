@@ -1,122 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+// un file JS/JSX che comincia con una lettera maiuscola (o che genericamente segue 1a nomenclatura
+// PascalCase) è un COMPONENTE REACT!
+// Un componente REACT ha estensione .js/.jsx
+
+// Un componente react è un frammento di interfaccia
+//  può venire scritto in due formule: come CLASSE o come FUNZIONE.
+// La formula più semplice è quella descritta in questo file
+
+//Il contenuto di questi componenti viene scritto in una sintassi simile ad HTML chiamato JSX
+// JSX è retrocompatibile con l'HTML ma con l'agevolazione del poter inserire direttamente JS al suo interno
+// Inserendo un paio di graffe è possibile inserire del JS all'interno della struttura
+// siccome alcune parole sono riservate in JS bisogna usare dei tag alternativi
+// class --> className
+// for-->forHMTL
+// tutti i listener diventano camelCase
+// onclick --> onClick
+
+import "./App.css"
+// come inserisco Title dentro App
+// prima lo importo
+import Title from "./components/Title"
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  // la regola dice che un'espressione JSX (come il valore di un return) può contenere UN SOLO VALORE
+  // quindi va inserito tutto all'interno di un "contenitore Virtuale"
+  // Che serve a far rispettare la regola del singolo valore. Si chiama REACT FRAGMENT
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      <Title />
     </>
   )
 }
 
 export default App
+
+// Al termine di ogni file JSX il file va ESPORTATO il componente React definito
+// in modo da rendererlo disponibile all'interno dell'app vite negli altri file/componenti
